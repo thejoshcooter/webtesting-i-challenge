@@ -52,13 +52,18 @@ describe('enhancer.js tests', () => {
     describe('fail()', () => {
         // todos
         // it.todo('should decrease item durability by 5 if enhancement is less than 15');
-        it.todo('should decrease item durability by 10 if enhancement is 15 or more');
+        // it.todo('should decrease item durability by 10 if enhancement is 15 or more');
         it.todo('should decrease item enhancement level by 1 if enhancement level is 15+');
 
         // tests
         it('should decrease item durability by 5 if enhancement is less than 15', () => {
             expect(enhancer.fail({ enhancement: 14, durability: 50 })).toEqual({ enhancement: 14, durability: 45 });
             expect(enhancer.fail({ enhancement: 10, durability: 80 })).toEqual({ enhancement: 10, durability: 75 });
+        });
+
+        it('should decrease item durability by 10 if enhancement is 15 or more', () => {
+            expect(enhancer.fail({ enhancement: 15, durability: 100 })).toEqual({ enhancement: 15, durability: 90 });
+            expect(enhancer.fail({ enhancement: 17, durability: 70 })).toEqual({ enhancement: 17, durability: 60 });
         });
     });
 });
