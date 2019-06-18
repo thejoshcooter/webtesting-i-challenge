@@ -22,7 +22,8 @@ function succeed(item) {
   if (item.enhancement < 20) {
     item = {
       ...item,
-      enhancement: item.enhancement + 1
+      enhancement: item.enhancement + 1,
+      durability: item.durability
     };
   } else {
     return { ...item };

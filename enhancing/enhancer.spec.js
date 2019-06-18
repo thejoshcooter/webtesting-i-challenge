@@ -30,7 +30,7 @@ describe('enhancer.js tests', () => {
     describe('succeed()', () => {
         // todos
         // it.todo('should increase an item\'s enhancement by 1');
-        it.todo('if item enhancement is level 20, level should not change');
+        // it.todo('if item enhancement is level 20, level should not change');
         it.todo('should not change item durability');
 
         // tests
@@ -41,6 +41,10 @@ describe('enhancer.js tests', () => {
 
         it('should not change enhancement level if already level 20', () => {
             expect(enhancer.succeed({ enhancement: 20 })).toEqual({ enhancement: 20 });
+        });
+
+        it('should not change item durability', () => {  
+            expect(enhancer.succeed({ enhancement: 6, durability: 10 })).toEqual({ enhancement: 7, durability: 10 });
         });
     });
 
