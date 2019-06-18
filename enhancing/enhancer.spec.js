@@ -38,6 +38,10 @@ describe('enhancer.js tests', () => {
             expect(enhancer.succeed({ enhancement: 5 })).toEqual({ enhancement: 6 });
             expect(enhancer.succeed({ enhancement: 10 })).toEqual({ enhancement: 11 });
         });
+
+        it('should not change enhancement level if already level 20', () => {
+            expect(enhancer.succeed({ enhancement: 20 })).toEqual({ enhancement: 20 });
+        });
     });
 
     // test fail function

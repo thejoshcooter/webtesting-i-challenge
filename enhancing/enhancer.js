@@ -19,10 +19,14 @@ function repair(item) {
 }
 
 function succeed(item) {
-  item = {
-    ...item,
-    enhancement: item.enhancement + 1
-  };
+  if (item.enhancement < 20) {
+    item = {
+      ...item,
+      enhancement: item.enhancement + 1
+    };
+  } else {
+    return { ...item };
+  }
   
   return { ...item };
 }
