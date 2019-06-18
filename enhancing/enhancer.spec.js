@@ -13,7 +13,7 @@ describe('enhancer.js tests', () => {
         // todos
         // it.todo('restores an item to 100 durability');
         // it.todo('doesn\'t affect an item already at 100 durability');
-        it.todo('should be able to handle an item with negative durability');
+        // it.todo('should be able to handle an item with negative durability');
 
         // tests
         it('restores an item to 100 durability', () => {
@@ -29,11 +29,15 @@ describe('enhancer.js tests', () => {
     // test succeed function
     describe('succeed()', () => {
         // todos
-        it.todo('should increase an item\'s enhancement by 1');
+        // it.todo('should increase an item\'s enhancement by 1');
         it.todo('if item enhancement is level 20, level should not change');
         it.todo('should not change item durability');
 
         // tests
+        it('should increase item enhancement by 1', () => {
+            expect(enhancer.succeed({ enhancement: 5 })).toEqual({ enhancement: 6 });
+            expect(enhancer.succeed({ enhancement: 10 })).toEqual({ enhancement: 11 });
+        });
     });
 
     // test fail function

@@ -19,6 +19,11 @@ function repair(item) {
 }
 
 function succeed(item) {
+  item = {
+    ...item,
+    enhancement: item.enhancement + 1
+  };
+  
   return { ...item };
 }
 
