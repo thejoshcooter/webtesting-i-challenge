@@ -6,10 +6,14 @@ module.exports = {
 };
 
 function repair(item) {
-  item = {
-    ...item,
-    durability: 100
-  };
+  if(item.durability != 100) {
+    item = {
+      ...item,
+      durability: 100
+    };
+  } else {
+    return { ...item }
+  }
   
   return { ...item };
 }

@@ -11,13 +11,17 @@ describe('enhancer.js tests', () => {
     // test repair function
     describe('repair()', () => {
         // todos
-        it.todo('restores an item to 100 durability');
-        it.todo('doesn\'t affect an item already at 100 durability');
+        // it.todo('restores an item to 100 durability');
+        // it.todo('doesn\'t affect an item already at 100 durability');
         it.todo('should be able to handle an item with negative durability');
 
         // tests
         it('restores an item to 100 durability', () => {
             expect(enhancer.repair({ durability: 56 })).toEqual({ durability: 100 });
+        });
+
+        it('does not affect an item already at 100 durability', () => {
+            expect(enhancer.repair({ durability: 100 })).toEqual({ durability: 100 });
         });
     });
 
