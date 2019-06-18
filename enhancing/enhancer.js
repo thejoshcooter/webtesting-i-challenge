@@ -33,6 +33,10 @@ function succeed(item) {
 }
 
 function fail(item) {
+  if (item.enhancement < 15) {
+    item.durability = item.durability - 5
+  }
+  
   return { ...item };
 }
 
