@@ -14,6 +14,11 @@ describe('enhancer.js tests', () => {
         it.todo('restores an item to 100 durability');
         it.todo('doesn\'t affect an item already at 100 durability');
         it.todo('should be able to handle an item with negative durability');
+
+        // tests
+        it('restores an item to 100 durability', () => {
+            expect(enhancer.repair({ durability: 56 })).toEqual({ durability: 100 });
+        });
     });
 
     // test succeed function
@@ -22,6 +27,8 @@ describe('enhancer.js tests', () => {
         it.todo('should increase an item\'s enhancement by 1');
         it.todo('if item enhancement is level 20, level should not change');
         it.todo('should not change item durability');
+
+        // tests
     });
 
     // test fail function
@@ -30,5 +37,7 @@ describe('enhancer.js tests', () => {
         it.todo('should decrease item durability by 5 if enhancement is less than 15');
         it.todo('should decrease item durability by 10 if enhancement is 15 or more');
         it.todo('should decrease item enhancement level by 1 if enhancement level is 15+');
+
+        // tests
     });
 });

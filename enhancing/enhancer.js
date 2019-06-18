@@ -5,15 +5,20 @@ module.exports = {
   get,
 };
 
+function repair(item) {
+  item = {
+    ...item,
+    durability: 100
+  };
+  
+  return { ...item };
+}
+
 function succeed(item) {
   return { ...item };
 }
 
 function fail(item) {
-  return { ...item };
-}
-
-function repair(item) {
   return { ...item };
 }
 
