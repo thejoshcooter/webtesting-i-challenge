@@ -18,6 +18,7 @@ describe('enhancer.js tests', () => {
         // tests
         it('restores an item to 100 durability', () => {
             expect(enhancer.repair({ durability: 56 })).toEqual({ durability: 100 });
+            expect(enhancer.repair({ durability: -20 })).toEqual({ durability: 100 });
         });
 
         it('does not affect an item already at 100 durability', () => {
